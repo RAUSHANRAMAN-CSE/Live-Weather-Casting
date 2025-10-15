@@ -1,0 +1,30 @@
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #4a00e0, #8e2de2);
+            background-image: url('photo1.jpg'); /* Deep purple gradient */
+        }
+        .container {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .weather-info {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .forecast-button {
+            background: linear-gradient(to right, #6EE7B7, #3B82F6); /* Green-blue gradient */
+            transition: all 0.2s ease-in-out;
+        }
+        .forecast-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+        .forecast-button:active {
+            transform: scale(0.95);
+        }
+        input::placeholder {
+            color: #ccc;
+        }
+    
