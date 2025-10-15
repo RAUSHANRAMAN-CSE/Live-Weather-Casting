@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="weather.js">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+   
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="container bg-white bg-opacity-10 rounded-xl p-8 max-w-lg w-full text-white shadow-lg backdrop-blur-md">
+        <h1 class="text-4xl font-bold text-center mb-6 text-white">Live Weather Casting...</h1>
+
+        <div class="mb-6">
+            <input type="text" id="cityInput" placeholder="Enter city name (e.g., London)"
+                   class="w-full p-3 rounded-lg bg-gray-700 bg-opacity-50 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 border border-gray-600">
+        </div>
+
+        <button id="getWeatherBtn"
+                class="w-full forecast-button text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline mb-6">
+            Get Weather
+        </button>
+
+        <div id="loadingIndicator" class="text-center py-4 hidden">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto"></div>
+            <p class="mt-2 text-white">Fetching weather data and generating image...</p>
+        </div>
+
+        <div id="weatherResult" class="hidden weather-info rounded-lg p-6 text-center border border-gray-600">
+            <h2 id="cityName" class="text-3xl font-semibold mb-2"></h2>
+            <p id="temperature" class="text-5xl font-bold mb-4"></p>
+            <p id="description" class="text-2xl capitalize mb-4"></p>
+            <img id="weatherImage" src="" alt="Weather Image" class="w-full max-w-md h-auto rounded-lg mx-auto mb-4 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x250/5B21B6/FFFFFF?text=No+Image';">
+            <div class="grid grid-cols-2 gap-4 text-xl">
+                <p><span class="font-semibold">Humidity:</span> <span id="humidity"></span></p>
+                <p><span class="font-semibold">Wind Speed:</span> <span id="windSpeed"></span></p>
+            </div>
+        </div>
+
+        <div id="messageBox" class="bg-red-500 text-white p-4 rounded-lg text-center mt-4 hidden"></div>
+    </div>
+ <script src="weather.js"></script> 
+    
+</body>
+</html>
